@@ -22,7 +22,7 @@ impl IssueDetector for WeirdErc721NotHandledDetector {
             capture!(self, context, vd);
         }
 
-        let assignments = capture_assignments(context).unwrap();
+        let assignments = capture_assignments(context, &[], &[], &[], &[]).unwrap();
 
         for assign_key in assignments.keys() {
             self.found_instances

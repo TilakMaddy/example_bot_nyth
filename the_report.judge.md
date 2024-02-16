@@ -59,6 +59,18 @@ Description for WeirdErc20NotHandledDetector
 
 Description for WeirdErc721NotHandledDetector
 
+- Found in src/Counter.sol [Line: 5](foundry_workspace/src/Counter.sol#L5)
+
+	```solidity
+	    uint256 public number;
+	```
+
+- Found in src/Counter.sol [Line: 7](foundry_workspace/src/Counter.sol#L7)
+
+	```solidity
+	    function setNumber(uint256 newNumber) public {
+	```
+
 - Found in src/Counter.sol [Line: 8](foundry_workspace/src/Counter.sol#L8)
 
 	```solidity
