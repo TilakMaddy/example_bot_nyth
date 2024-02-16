@@ -1,3 +1,5 @@
+use crate::weird_erc721_not_handled::detector::WeirdErc721NotHandledDetector;
+use crate::weird_erc20_not_handled::detector::WeirdErc20NotHandledDetector;
 // ADERYN-PILOT: 0x01 (Please feel free to fix above imports if they mess up)
 
 use std::{fs::OpenOptions, io::BufWriter, path::PathBuf};
@@ -21,6 +23,8 @@ use serde::Serialize;
 
 fn custom_detectors() -> Vec<Box<dyn IssueDetector>> {
     vec![
+		Box::<WeirdErc20NotHandledDetector>::default(),
+		Box::<WeirdErc721NotHandledDetector>::default(),
         // ADERYN-PILOT: 0x02 CUSTOM DETECTORS - Do not remove this comment even if the array is empty
     ]
 }
